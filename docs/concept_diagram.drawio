@@ -1,0 +1,42 @@
+<mxfile host="app.diagrams.net" modified="2025-11-02T00:00:00.000Z" agent="5.0" version="24.8.0" editor="diagramly">
+  <diagram id="LLMForgeDiagram" name="LLMForge Concept">
+    <mxGraphModel dx="900" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Orchestrator -->
+        <mxCell id="orchestrator" value="Orchestrator<br/><font size='10'>(context, goals)</font>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="280" y="40" width="290" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- LLM Agents -->
+        <mxCell id="agents" value="LLM Agents<br/><font size='10'>(generate code/tests from plans)</font>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="280" y="160" width="290" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- CI/CD Runners -->
+        <mxCell id="ci" value="CI/CD Runners<br/><font size='10'>(verify &amp; produce patch reports)</font>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="280" y="280" width="290" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- Human Validation -->
+        <mxCell id="human" value="Human Validation<br/><font size='10'>(approve → merge)</font>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="280" y="400" width="290" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- Arrows -->
+        <mxCell id="arrow1" style="endArrow=block;html=1;strokeColor=#6c8ebf;strokeWidth=2" edge="1" source="orchestrator" target="agents" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="arrow2" style="endArrow=block;html=1;strokeColor=#82b366;strokeWidth=2" edge="1" source="agents" target="ci" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="arrow3" style="endArrow=block;html=1;strokeColor=#d6b656;strokeWidth=2" edge="1" source="ci" target="human" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
