@@ -1,5 +1,10 @@
 # LLMForge Protocol
 
+LLMForge introduces a conceptual framework for supervised AI-assisted
+software development.  
+It formalizes how language models, CI/CD pipelines and human validation
+can cooperate under a shared versioned protocol.
+
 ### Vision
 
 LLMForge explores a new way for artificial intelligence and developers to collaborate.
